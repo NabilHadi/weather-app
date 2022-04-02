@@ -7,11 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <title>Weather App</title>
-  <script src="./index.js"></script>
+  <script defer src="./index.js"></script>
 </head>
 
 <body>
-  <h1>Hello Weather</h1>
+  <div class="container">
+    <img src="" alt="weather icon" id="weather-icon">
+    <div id="weather-description"></div>
+    <div id="city-name-container">
+      <span>City: </span>
+      <span id="city-name"></span>
+    </div>
+    <div id="temp-container">
+      <span>Temp: </span>
+      <span id="temp"></span>
+      <span class="temp-unit"></span>
+    </div>
+    <div id="feels-like-container">
+      <span>Feels Like: </span>
+      <span id="feels-like"></span>
+      <span class="temp-unit"></span>
+    </div>
+    <div id="input-container">
+      <input type="text" name="city-input" id="city-input" placeholder="City Search">
+      <button id="search-btn">Search</button>
+    </div>
+    <div id="toggle-temp-container">
+      <span>Fahrenheit</span>
+      <input type="checkbox" name="toggle-temp" id="toggle-temp">
+    </div>
+  </div>
+
 </body>
 
 </html>
