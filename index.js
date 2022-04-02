@@ -2,7 +2,7 @@ const API_KEY = "36ce6e444ccdccbe388d184c5b4b92e8";
 
 async function fetchCityCoordinates(cityName) {
   const respone = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
   );
   const json = await respone.json();
   console.log(json);
