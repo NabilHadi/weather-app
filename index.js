@@ -5,7 +5,6 @@ async function fetchCityCoordinates(cityName) {
     `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
   );
   const json = await respone.json();
-  console.log(json);
   return {
     lat: json[0].lat,
     lon: json[0].lon,
@@ -138,7 +137,6 @@ fetchCityCoordinates("London", 1)
     return fetchWeatherData(cityCoord);
   })
   .then((weatherData) => {
-    console.log(weatherData);
     const weatherObj = getWeatherObject(weatherData);
     WeatherDisplayController.displayWeather(weatherObj);
   });
