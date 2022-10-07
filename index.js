@@ -1,6 +1,7 @@
 const API_KEY = "36ce6e444ccdccbe388d184c5b4b92e8";
 
 async function fetchCityCoordinates(cityName) {
+  cityName = encodeURIComponent(cityName);
   const respone = await fetch(
     `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
   );
@@ -132,7 +133,7 @@ const WeatherDisplayController = (function () {
   };
 })();
 
-fetchCityCoordinates("London", 1)
+fetchCityCoordinates("London")
   .then((cityCoord) => {
     return fetchWeatherData(cityCoord);
   })
