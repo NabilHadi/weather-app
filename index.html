@@ -11,6 +11,27 @@
 </head>
 
 <body>
+  <div class="container">
+    <h1>Weather</h1>
+    <form id="location-form">
+      <input type="text" id="location-input" name="location-input" placeholder="City/Country name">
+      <button type="submit" id="location-form-submit-btn">Get weather</button>
+      <button type="button" id="getLocationBtn">Get My Location</button>
+    </form>
+    <div class="loading">
+      <div class="loading-spinner"></div>
+      <p>Loading...</p>
+    </div>
+    <div class="weather">
+      <h2 class="location"></h2>
+      <p class="country-code"></p>
+      <div class="icon"></div>
+      <p class="description"></p>
+      <p class="temp"></p>
+      <p class="feels_like"></p>
+      <p class="humidity"></p>
+    </div>
+  </div>
 </body>
 
 </html>
